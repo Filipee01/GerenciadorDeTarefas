@@ -38,4 +38,4 @@ Esta é uma aplicação de Gerenciador de Tarefas desenvolvida com React e React
 
 # Créditos
 
-Luiz Filipe Santos de Souza
+Luiz Filipe Santos de Souza.

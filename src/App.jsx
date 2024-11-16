@@ -5,9 +5,10 @@ import { v4 as uuidv4 } from "uuid"; //importando a função uuidv4 para gerar u
 import Title from "./components/Title";
 
 const App = () => {
-  const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks") || [])
-  ); // criando State para armazenar as tarefas
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
 
   //função para marcar a tarefa como concluída
   function onTaskClick(taskId) {
